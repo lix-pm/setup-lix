@@ -366,11 +366,11 @@ exports.getState = getState;
 var Main = function() { };
 Main.main = function() {
 	var version = __webpack_require__(470).getInput("lix-version");
-	var args = ["global","add","lix@" + version];
+	var args = ["-g","i","lix@" + version];
 	if(args == null) {
-		js_node_ChildProcess.spawnSync("yarn",{ shell : true, stdio : "inherit"});
+		js_node_ChildProcess.spawnSync("npm",{ shell : true, stdio : "inherit"});
 	} else {
-		js_node_ChildProcess.spawnSync("yarn",args,{ stdio : "inherit"});
+		js_node_ChildProcess.spawnSync("npm",args,{ stdio : "inherit"});
 	}
 };
 var js_node_ChildProcess = __webpack_require__(129);
