@@ -5,10 +5,9 @@
   "scripts": {
     "build": "ncc build build/haxe-output.js -o build"
   },
-  "dependencies": {
-    "@actions/core": "^1.2.3"
-  },
   "devDependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/exec": "^1.0.3",
     "@zeit/ncc": "^0.21.1"
   }
 }
