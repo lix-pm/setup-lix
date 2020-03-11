@@ -1,0 +1,10 @@
+name: 'Setup Lix'
+description: 'Setup Lix'
+inputs:
+  lix-version: 
+    description: 'Version of Lix to use'
+    required: true
+    default: '15.5.4'
+runs:
+  using: 'node12'
+  main: 'build/index.js'
