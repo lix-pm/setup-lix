@@ -365,8 +365,7 @@ exports.getState = getState;
 (function ($global) { "use strict";
 var Main = function() { };
 Main.main = function() {
-	var version = __webpack_require__(470).getInput("lix-version");
-	var args = ["-g","i","lix@" + version];
+	var args = ["-g","i","lix@" + __webpack_require__(470).getInput("lix-version")];
 	if(args == null) {
 		js_node_ChildProcess.spawnSync("npm",{ shell : true, stdio : "inherit"});
 	} else {

@@ -3,6 +3,6 @@
 -js build/haxe-output.js
 -dce full
 -lib hxnodejs
--D analyzer-optimze
+-D analyzer-optimize
 
 --cmd yarn build
