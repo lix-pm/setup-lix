@@ -365,12 +365,19 @@ exports.getState = getState;
 (function ($global) { "use strict";
 var Main = function() { };
 Main.main = function() {
-	var args = ["global","add","lix@" + __webpack_require__(470).getInput("lix-version")];
+	var core = __webpack_require__(470);
+	var args = ["global","add","lix@" + core.getInput("lix-version")];
 	if(args == null) {
 		js_node_ChildProcess.spawnSync("yarn",{ shell : true, stdio : "inherit"});
 	} else {
 		js_node_ChildProcess.spawnSync("yarn",args,{ stdio : "inherit"});
 	}
+	var path = StringTools.replace(js_node_ChildProcess.execSync("yarn global bin").toString(),"\n","");
+	core.addPath(path);
+};
+var StringTools = function() { };
+StringTools.replace = function(s,sub,by) {
+	return s.split(sub).join(by);
 };
 var js_node_ChildProcess = __webpack_require__(129);
 Main.main();
