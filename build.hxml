@@ -1,6 +1,8 @@
 -cp src
 -main Main
--js build/index.js
+-js build/haxe-output.js
 -dce full
 -lib hxnodejs
 -D analyzer-optimze
+
+--cmd yarn build

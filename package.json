@@ -2,7 +2,13 @@
   "name": "setup-lix",
   "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "build": "ncc build build/haxe-output.js -o build"
+  },
   "dependencies": {
     "@actions/core": "^1.2.3"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.21.1"
   }
 }
