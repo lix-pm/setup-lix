@@ -3,7 +3,7 @@
 ### Usage:
 
 ```yaml
-- uses: lix-pm/setup-lix@master
+- uses: lix-pm/setup-lix@1.0.0
   with:
-    lix-version: 15.5.4 # optional
+    lix-version: 15.8.9 # optional
 ```
