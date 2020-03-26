@@ -1,7 +1,8 @@
 name: 'Setup Lix'
 description: 'Setup Lix (a package manager for Haxe)'
-icon: package
-color: blue
+branding:
+  icon: 'package'
+  color: 'blue'
 inputs:
   lix-version: 
     description: 'Version of Lix to use'
