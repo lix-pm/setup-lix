@@ -8,6 +8,8 @@ class Main {
 		var version = core.getInput('lix-version');
 		Sys.command('yarn', ['global', 'add', 'lix@$version']);
 		var path = (ChildProcess.execSync('yarn global bin'):Buffer).toString().replace('\n', '');
+		trace(Sys.getEnv("PATH"));
 		core.addPath(path);
+		trace(Sys.getEnv("PATH"));
 	}
 }

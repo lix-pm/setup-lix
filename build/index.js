@@ -373,7 +373,9 @@ Main.main = function() {
 		js_node_ChildProcess.spawnSync("yarn",args,{ stdio : "inherit"});
 	}
 	var path = StringTools.replace(js_node_ChildProcess.execSync("yarn global bin").toString(),"\n","");
+	console.log("src/Main.hx:11:",process.env["PATH"]);
 	core.addPath(path);
+	console.log("src/Main.hx:13:",process.env["PATH"]);
 };
 var StringTools = function() { };
 StringTools.replace = function(s,sub,by) {
