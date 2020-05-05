@@ -373,15 +373,18 @@ Main.main = function() {
 		js_node_ChildProcess.spawnSync("yarn",args,{ stdio : "inherit"});
 	}
 	var path = StringTools.replace(js_node_ChildProcess.execSync("yarn global bin").toString(),"\n","");
-	console.log("src/Main.hx:11:",process.env["PATH"]);
-	core.addPath(path);
+	console.log("src/Main.hx:12:",js_node_Fs.readdirSync(path));
 	console.log("src/Main.hx:13:",process.env["PATH"]);
+	core.addPath(path);
+	console.log("src/Main.hx:15:",process.env["PATH"]);
+	console.log("src/Main.hx:18:",js_node_ChildProcess.execSync("lix").toString());
 };
 var StringTools = function() { };
 StringTools.replace = function(s,sub,by) {
 	return s.split(sub).join(by);
 };
 var js_node_ChildProcess = __webpack_require__(129);
+var js_node_Fs = __webpack_require__(747);
 Main.main();
 })({});
 
@@ -392,6 +395,13 @@ Main.main();
 /***/ (function(module) {
 
 module.exports = require("path");
+
+/***/ }),
+
+/***/ 747:
+/***/ (function(module) {
+
+module.exports = require("fs");
 
 /***/ })
 
