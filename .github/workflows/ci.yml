@@ -20,8 +20,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: ./
-    - run: echo $PATH
-    - run: yarn global bin
-    - run: ls -lah $(yarn global bin)
     - run: lix
     - run: lix install haxe stable
