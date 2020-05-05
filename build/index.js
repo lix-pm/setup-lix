@@ -366,18 +366,13 @@ exports.getState = getState;
 var Main = function() { };
 Main.main = function() {
 	var core = __webpack_require__(470);
-	var args = ["global","add","lix@" + core.getInput("lix-version")];
-	if(args == null) {
-		js_node_ChildProcess.spawnSync("yarn",{ shell : true, stdio : "inherit"});
-	} else {
-		js_node_ChildProcess.spawnSync("yarn",args,{ stdio : "inherit"});
-	}
+	console.log("src/Main.hx:11:",js_node_ChildProcess.execSync("yarn global add lix@" + core.getInput("lix-version")).toString());
 	var path = StringTools.replace(js_node_ChildProcess.execSync("yarn global bin").toString(),"\n","");
-	console.log("src/Main.hx:12:",js_node_Fs.readdirSync(path));
-	console.log("src/Main.hx:13:",process.env["PATH"]);
+	console.log("src/Main.hx:13:",js_node_Fs.readdirSync(path));
+	console.log("src/Main.hx:14:",process.env["PATH"]);
 	core.addPath(path);
-	console.log("src/Main.hx:15:",process.env["PATH"]);
-	console.log("src/Main.hx:18:",js_node_ChildProcess.execSync("lix").toString());
+	console.log("src/Main.hx:16:",process.env["PATH"]);
+	console.log("src/Main.hx:19:",js_node_ChildProcess.execSync("lix").toString());
 };
 var StringTools = function() { };
 StringTools.replace = function(s,sub,by) {
