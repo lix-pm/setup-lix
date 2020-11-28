@@ -7,7 +7,7 @@ inputs:
   lix-version: 
     description: 'Version of Lix to use'
     required: true
-    default: '15.8.11'
+    default: '15.10.1'
 runs:
   using: 'node12'
   main: 'build/index.js'
