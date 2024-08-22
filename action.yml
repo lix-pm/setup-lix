@@ -9,5 +9,5 @@ inputs:
     required: true
     default: '15.12.0'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'build/index.js'
