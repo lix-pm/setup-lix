@@ -2,7 +2,11 @@
 	"name": "setup-lix",
 	"version": "1.0.1",
 	"license": "MIT",
+	"scripts": {
+		"build": "ncc build src/index.js -o build"
+	},
 	"devDependencies": {
-		"@actions/core": "^1.9.1"
+		"@actions/core": "^1.9.1",
+		"@zeit/ncc": "^0.22.3"
 	}
 }
