@@ -6,7 +6,6 @@ branding:
 inputs:
   lix-version:
     description: "Version of Lix to use"
-    required: true
 runs:
   using: "node20"
   main: "src/index.js"
