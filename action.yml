@@ -1,13 +1,11 @@
-name: 'Setup Lix'
-description: 'Setup Lix (a package manager for Haxe)'
+name: "Setup Lix"
+description: "Setup Lix (a package manager for Haxe)"
 branding:
-  icon: 'package'
-  color: 'blue'
+  icon: "package"
+  color: "blue"
 inputs:
-  lix-version: 
-    description: 'Version of Lix to use'
-    required: true
-    default: '15.12.0'
+  lix-version:
+    description: "Version of Lix to use"
 runs:
-  using: 'node20'
-  main: 'build/index.js'
+  using: "node20"
+  main: "build/index.js"

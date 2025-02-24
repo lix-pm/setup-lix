@@ -2,9 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -12,13 +10,13 @@ jobs:
 
     strategy:
       matrix:
-        os: 
+        os:
           - ubuntu-latest
           - windows-latest
           - macos-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: ./
-    - run: lix
-    - run: lix install haxe stable
+      - uses: actions/checkout@v2
+      - uses: ./
+      - run: lix
+      - run: lix install haxe stable
