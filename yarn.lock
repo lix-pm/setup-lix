@@ -17,11 +17,6 @@
   dependencies:
     tunnel "^0.0.6"
 
-"@zeit/ncc@^0.21.1":
-  version "0.21.1"
-  resolved "https://registry.npmjs.org/@zeit/ncc/-/ncc-0.21.1.tgz"
-  integrity sha512-M9WzgquSOt2nsjRkYM9LRylBLmmlwNCwYbm3Up3PDEshfvdmIfqpFNSK8EJvR18NwZjGHE5z2avlDtYQx2JQnw==
-
 tunnel@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/tunnel/-/tunnel-0.0.6.tgz#72f1314b34a5b192db012324df2cc587ca47f92c"
