@@ -8,4 +8,4 @@ inputs:
     description: "Version of Lix to use"
 runs:
   using: "node20"
-  main: "src/index.js"
+  main: "build/index.js"
