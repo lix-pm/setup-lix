@@ -16,7 +16,18 @@ jobs:
           - macos-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies and build
+        run: |
+          corepack enable
+          yarn install --immutable
+          yarn build
+
       - uses: ./
       - run: lix
       - run: lix install haxe stable

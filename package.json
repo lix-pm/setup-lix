@@ -1,12 +1,14 @@
 {
 	"name": "setup-lix",
-	"version": "1.0.1",
+	"version": "2.0.0",
+	"type": "module",
 	"license": "MIT",
 	"scripts": {
 		"build": "ncc build src/index.js -o build"
 	},
 	"devDependencies": {
-		"@actions/core": "^1.9.1",
-		"@zeit/ncc": "^0.22.3"
-	}
+		"@actions/core": "^3.0.1",
+		"@vercel/ncc": "^0.44.1"
+	},
+	"packageManager": "yarn@4.17.0"
 }

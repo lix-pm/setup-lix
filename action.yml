@@ -7,5 +7,5 @@ inputs:
   lix-version:
     description: "Version of Lix to use"
 runs:
-  using: "node20"
+  using: "node24"
   main: "build/index.js"
